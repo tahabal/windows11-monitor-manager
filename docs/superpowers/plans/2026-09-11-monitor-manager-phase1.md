@@ -23,7 +23,7 @@
 
 ---
 
-### Task 1: Project scaffold (Tauri v2 + Vue 3 + TS + Vitest + VitePress)
+### Task 1 (RAC-282): Project scaffold (Tauri v2 + Vue 3 + TS + Vitest + VitePress)
 
 **Files:**
 - Create: `package.json`, `vite.config.ts`, `tsconfig.json`, `index.html`, `src/main.ts`, `src/App.vue`
@@ -110,7 +110,7 @@ git commit -m "chore: scaffold Tauri v2 + Vue 3 + Vitest + VitePress"
 
 ---
 
-### Task 2: Shared domain types + monitor enumeration + stable ordering
+### Task 2 (RAC-283): Shared domain types + monitor enumeration + stable ordering
 
 **Files:**
 - Create: `src-tauri/src/model.rs` (serde types shared over IPC)
@@ -247,7 +247,7 @@ git commit -m "feat: monitor model + stable ordering + EnumDisplayMonitors"
 
 ---
 
-### Task 3: Manageable-window filter (pure) + window enumeration
+### Task 3 (RAC-284): Manageable-window filter (pure) + window enumeration
 
 **Files:**
 - Create: `src-tauri/src/win/filter.rs`
@@ -400,7 +400,7 @@ git commit -m "feat: manageable-window filter + EnumWindows probe"
 
 ---
 
-### Task 4: `translate_rect` (pure) + `move_window`
+### Task 4 (RAC-285): `translate_rect` (pure) + `move_window`
 
 **Files:**
 - Create: `src-tauri/src/win/move_window.rs`
@@ -517,7 +517,7 @@ git commit -m "feat: translate_rect + move_to_monitor"
 
 ---
 
-### Task 5: App state + Tauri commands (`get_snapshot`, `move_window`, `move_self_to_monitor`, `focus_window`)
+### Task 5 (RAC-286): App state + Tauri commands (`get_snapshot`, `move_window`, `move_self_to_monitor`, `focus_window`)
 
 **Files:**
 - Create: `src-tauri/src/state.rs`
@@ -657,7 +657,7 @@ git commit -m "feat: app state + IPC commands (snapshot/move/self-move/focus)"
 
 ---
 
-### Task 6: WinEvent hook thread + live `desktop:changed` events + supervision
+### Task 6 (RAC-287): WinEvent hook thread + live `desktop:changed` events + supervision
 
 **Files:**
 - Create: `src-tauri/src/win/events.rs`
@@ -723,7 +723,7 @@ git commit -m "feat: WinEvent hook thread with coalesced live desktop events + p
 
 ---
 
-### Task 7: Frontend — desktop store + canvas scaling (pure) + MonitorMap render
+### Task 7 (RAC-288): Frontend — desktop store + canvas scaling (pure) + MonitorMap render
 
 **Files:**
 - Create: `src/lib/scale.ts`, `src/lib/scale.test.ts`
@@ -822,7 +822,7 @@ git commit -m "feat: desktop store + scale-to-fit canvas + live MonitorMap"
 
 ---
 
-### Task 8: Drag-to-move + per-tile "send to →" menu
+### Task 8 (RAC-289): Drag-to-move + per-tile "send to →" menu
 
 **Files:**
 - Modify: `src/components/WindowTile.vue`, `src/components/MonitorMap.vue`
@@ -864,7 +864,7 @@ git commit -m "feat: drag-to-move + send-to-monitor menu"
 
 ---
 
-### Task 9: Tray, close-to-tray, exit, DPI manifest
+### Task 9 (RAC-290): Tray, close-to-tray, exit, DPI manifest
 
 **Files:**
 - Modify: `src-tauri/src/lib.rs` (tray + window-close handling)
@@ -903,7 +903,7 @@ git commit -m "feat: tray + close-to-tray + exit + Per-Monitor-V2 DPI"
 
 ---
 
-### Task 10: Self-move number hotkeys (focused-only)
+### Task 10 (RAC-291): Self-move number hotkeys (focused-only)
 
 **Files:**
 - Create: `src/lib/hotkeys.ts`, `src/lib/hotkeys.test.ts`
@@ -983,7 +983,7 @@ git commit -m "feat: focused-only number-key self-move"
 
 ---
 
-### Task 11: Documentation pass + README polish + VitePress build in check
+### Task 11 (RAC-292): Documentation pass + README polish + VitePress build in check
 
 **Files:**
 - Modify: `docs/index.md`, `docs/architecture.md`, `docs/win32.md`, `docs/ipc.md`
