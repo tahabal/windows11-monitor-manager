@@ -241,7 +241,30 @@ structs (`Desktop`, `MonitorInfo`, `WindowInfo`).
 - **Phase 3 — auto-place rules.** "App X → monitor/zone N on open,"
   driven by the same `EVENT_OBJECT_CREATE` hook.
 
-## 14. Open items for implementation planning
+## 14. Documentation (as-we-go)
+
+Documentation is a first-class deliverable, kept current with the code
+rather than bolted on at the end.
+
+- **README.md** — overview, feature list, roadmap, dev quickstart,
+  links into the docs site. Maintained continuously.
+- **VitePress docs site** under `docs/` (`docs:dev` / `docs:build`
+  scripts). Vue-native, matches the stack. Sections:
+  - *Architecture* — the module map (§5), the WinEvent hook thread
+    (§6), coordinate/DPI model (§8).
+  - *Win32 internals* — the manageable-window heuristic (§4) and the
+    move/translate semantics (§7), written as reference for the
+    learning-Rust-and-Win32 goal.
+  - *IPC reference* — the command/event surface (§10) with the shared
+    types.
+  - *Contributing / dev setup*.
+- The existing `docs/superpowers/specs/` design docs stay in-tree; the
+  VitePress site links to them rather than duplicating them.
+- **Rule:** each implementation task that adds or changes a public
+  behavior updates the relevant doc page in the same change. Rust
+  public items carry `///` doc comments; exported TS has TSDoc.
+
+## 15. Open items for implementation planning
 
 - Confirm Tauri v2 tray + `windows` crate versions at plan time
   (pin exact versions).
